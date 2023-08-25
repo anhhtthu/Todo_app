@@ -1,5 +1,13 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .App-logo {
@@ -14,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +30,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: "Rubik", sans-serif;
+  background-attachment: fixed;
 }
 
 .App-link {
@@ -35,4 +45,152 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* list styling */
+.todo-list {
+  width: 45%;
+  height: auto;
+  padding: 2rem 2.5rem;
+  background-color: #fcfdfd;
+  color: #484c4c;
+  border-radius: 3rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.todo-title {
+  width: 100%;
+  display: flex;
+}
+
+.text-contain {
+  width: 60%;
+  height: auto;
+}
+
+.text-main {
+  font-size: 1.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.text-sub {
+  font-size: 2.2rem;
+  padding-bottom: 2rem;
+}
+
+.counting {
+  font-size: 1.5rem;
+  color: #979d9d;
+  font-weight: lighter;
+  padding-bottom: 2rem;
+  width: 30%;
+}
+
+form.todo-form {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+input.todo-input {
+  width: 85%;
+  height: 4rem;
+  border-radius: 2rem;
+  padding: 2rem;
+  border: none;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  color: #fcfdfd;
+
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+input.todo-input::placeholder {
+  color: #fcfdfdb0;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+input.todo-input:focus-visible {
+  outline: none;
+}
+
+button.input-btn {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 5rem;
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+
+  color: #fcfdfd;
+  font-size: 2rem;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  cursor: pointer;
+}
+
+.todo-row {
+  width: 100%;
+  background-color: #8ec5fc0a;
+  border-radius: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #5babfc;
+  font-weight: bold;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  line-break: normal;
+}
+
+.todo-text {
+  width: 80%;
+  word-wrap: break-word;
+  text-transform: capitalize;
+}
+
+.todo-row:hover {
+  background-color: #8ec5fc83;
+  color: #09407883;
+}
+
+.todo-row.complete {
+  background-color: #6981982a;
+  color: #fcfdfd;
+}
+
+.icons {
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  color: #5babfcad;
+}
+
+.delete-icon {
+  color: rgba(189, 93, 93, 0.519);
+}
+
+.edit-icon.complete {
+  color: #fcfdfd;
+}
+
+.input-btn.edit {
+  font-size: 1.5rem;
 }
